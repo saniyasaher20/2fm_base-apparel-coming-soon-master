@@ -21,7 +21,7 @@
 }
 
 .card .card--col-text {
-  background: url("../images/bg-pattern-desktop.svg") center/cover;
+  background: url("../images/bg-pattern-desktop.svg") top/cover;
   display: flex;
   justify-content: center;
 }
@@ -37,9 +37,9 @@
 }
 .card .card--col-text .card--body .card--title {
   font-size: 3.5rem;
-  letter-spacing: 12px;
+  letter-spacing: 18px;
   line-height: 1em;
-  font-weight: 600;
+  font-weight: 400;
 }
 .card .card--col-text .card--body .card--title .card--we-are {
   font-weight: 300;
