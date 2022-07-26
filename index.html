@@ -29,11 +29,11 @@
 </head>
 
 <body>
-<header role="header" class="d-md-none p-4">
-  <div class="header--div">
-    <img src="./images/logo.svg" class="header--logo" alt="Base Apparel">
-  </div>
-</header>
+  <header role="header" class="d-md-none p-4">
+    <div class="header--div">
+      <img src="./images/logo.svg" class="header--logo" alt="Base Apparel">
+    </div>
+  </header>
   <main role="main">
     <div class="card border-0 mb-3">
       <div class="row g-0 card--row">
@@ -53,17 +53,21 @@
               store. Add your email
               below to stay up-to-date with announcements and our launch deals.</p>
 
-            <div class="input-group mb-3 card--email-btn-grp">
-              <input type="text" class="form-control card--email-input" placeholder="Email Address" aria-label="Email Address"
-                aria-describedby="email-btn">
-              <button class="btn card--email-btn" type="button" id="email-btn"><img src="./images/icon-arrow.svg"
-                  alt=">"></button>
-            </div>
+            <form action="#" name="form" class="input-group card--email-btn-grp" id="card--form" method="post">
+
+              <input type="email" name="card--email-input" id="emailId" class="form-control card--email-input"
+                placeholder="Email Address" aria-label="Email Address" aria-describedby="email-btn" required>
+
+              <button class="btn card--email-btn" type="submit" id="email-btn"><img src="./images/icon-arrow.svg"
+                  alt=">" onclick="validate()"></button>
+            </form>
+            <b><small id="formError" class="card--formError ps-4"></small></b>
+
           </div>
         </div>
 
         <div class="col-md-4">
-          <img src="/images/hero-desktop.jpg" class="img-fluid w-100" alt="...">
+          <img src="./images/hero-desktop.jpg" class="img-fluid w-100 h-100" alt="...">
         </div>
 
       </div>
@@ -85,5 +89,14 @@
     </p>
   </footer>
 </body>
+
+<script>
+ function validate(){
+  let email = document.getElementById("emailId");
+  if(!email.checkValidity()){
+    document.getElementById("formError").innerHTML = email.validationMessage
+  }
+ }
+</script>
 
 </html>

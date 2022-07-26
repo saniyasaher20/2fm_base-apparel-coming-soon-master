@@ -88,6 +88,9 @@
   transition: ease-in-out 0.3s;
   background: hsl(0deg, 80%, 86%) !important;
 }
+.card .card--col-text .card--body .card--formError {
+  color: hsl(0deg, 93%, 68%);
+}
 
 main {
   min-width: 100vw;
