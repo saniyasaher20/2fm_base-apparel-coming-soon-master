@@ -1,0 +1,117 @@
+:root {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.text-desaturatedRed {
+  color: hsl(0deg, 36%, 70%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+.card .card--col-text {
+  background: url("../images/bg-pattern-desktop.svg") center/cover;
+  display: flex;
+  justify-content: center;
+}
+.card .card--col-text .card--body {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.card .card--col-text .card--body .card--logo {
+  width: 50%;
+  padding-bottom: 1rem;
+}
+.card .card--col-text .card--body .card--title {
+  font-size: 3.5rem;
+  letter-spacing: 12px;
+  line-height: 1em;
+  font-weight: 600;
+}
+.card .card--col-text .card--body .card--title .card--we-are {
+  font-weight: 300;
+  font-size: 3.8rem;
+}
+.card .card--col-text .card--body .card--description {
+  color: hsl(0deg, 36%, 70%);
+}
+.card .card--col-text .card--body .card--email-btn-grp {
+  position: relative;
+}
+.card .card--col-text .card--body .card--email-btn-grp .card--email-input {
+  border-radius: 100px !important;
+  padding: 0.8rem 0 0.8rem 2rem;
+  color: hsl(0deg, 36%, 70%) !important;
+  z-index: 1;
+}
+.card .card--col-text .card--body .card--email-btn-grp .card--email-input:focus {
+  border: hsl(0deg, 6%, 24%) 1px solid;
+  box-shadow: none;
+}
+.card .card--col-text .card--body .card--email-btn-grp .card--email-input::-moz-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  letter-spacing: 1px;
+}
+.card .card--col-text .card--body .card--email-btn-grp .card--email-input:-ms-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  letter-spacing: 1px;
+}
+.card .card--col-text .card--body .card--email-btn-grp .card--email-input::placeholder {
+  color: hsl(0deg, 36%, 70%);
+  letter-spacing: 1px;
+}
+.card .card--col-text .card--body .card--email-btn-grp .btn.card--email-btn {
+  border-radius: 100px !important;
+  padding: 0.8rem 2.5rem;
+  border: 0;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%)) !important;
+  box-shadow: hsl(0deg, 36%, 70%) 0px 6px 6px 0px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  z-index: 99;
+}
+.card .card--col-text .card--body .card--email-btn-grp .btn.card--email-btn:hover, .card .card--col-text .card--body .card--email-btn-grp .btn.card--email-btn:active {
+  transition: ease-in-out 0.3s;
+  background: hsl(0deg, 80%, 86%) !important;
+}
+
+main {
+  min-width: 100vw;
+}
+
+@media (max-width: 375px) {
+  header .header--logo {
+    width: 100px;
+  }
+  .card .card--col-text {
+    order: 1;
+  }
+  .card .card--body {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  .card .card--title {
+    font-size: 3.2rem !important;
+  }
+  .card .card--title .card--we-are {
+    font-size: 3.5rem !important;
+  }
+  .card .card--description {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */

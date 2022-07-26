@@ -1,0 +1,144 @@
+$darkGrayishRed : hsl(0, 6%, 24%);
+$desaturatedRed: hsl(0, 36%, 70%);
+$softRed: hsl(0, 93%, 68%);
+$gradient1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+$gradient2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+
+:root {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.text-desaturatedRed {
+    color: $desaturatedRed
+}
+
+// FOOTER
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+.card {
+
+    .card--col-text {
+        background: url("../images/bg-pattern-desktop.svg") center / cover;
+        display: flex;
+        justify-content: center;
+
+        .card--body {
+            // padding: 0rem 8rem;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            .card--logo {
+                width: 50%;
+                padding-bottom: 1rem;
+            }
+
+
+            .card--title {
+                font-size: 3.5rem;
+                letter-spacing: 12px;
+                line-height: 1em;
+                font-weight: 600;
+
+                .card--we-are {
+                    font-weight: 300;
+                    font-size: 3.8rem;
+                }
+            }
+
+            .card--description {
+                color: $desaturatedRed;
+            }
+
+            .card--email-btn-grp {
+                position: relative;
+
+                .card--email-input {
+                    border-radius: 100px !important;
+                    padding: .8rem 0 .8rem 2rem;
+                    color: $desaturatedRed  !important;
+                    z-index: 1;
+
+                    &:focus {
+                        border: $darkGrayishRed 1px solid;
+                        box-shadow: none;
+                    }
+
+                    &::placeholder {
+                        color: $desaturatedRed;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                .btn.card--email-btn {
+                    border-radius: 100px !important;
+                    padding: .8rem 2.5rem;
+                    border: 0;
+                    background: linear-gradient($gradient2) !important;
+                    box-shadow: $desaturatedRed 0px 6px 6px 0px;
+                    position: absolute;
+                    top: 0;
+                    right: 0px;
+                    z-index: 99;
+
+                    &:hover,
+                    &:active {
+                        transition: ease-in-out .3s;
+                        background: hsl(0, 80%, 86%) !important;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}
+
+main {
+    min-width: 100vw;
+}
+
+@media(max-width:375px) {
+    header{
+        .header--logo{
+            width: 100px;
+        }
+    }
+    .card {
+        
+        .card--col-text {
+            order: 1;
+        }
+        .card--body{
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .card--title{
+            font-size: 3.2rem !important;
+            .card--we-are{
+                font-size: 3.5rem !important;
+            }
+        }
+        .card--description{
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
+
+    }
+}
